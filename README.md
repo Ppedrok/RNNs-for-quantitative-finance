@@ -15,9 +15,9 @@ The repository includes:
 
 ## Methodology
 - **Target**: realized volatility  
-  \[
+  $\[
   RV_{t,k} = \sqrt{\sum_{j=1}^{k} r_{t+j}^2}, \quad y_{t,k} = \log(RV_{t,k})
-  \]  
+  \]$  
 - **Architecture**: GRU → GRU → TimeDistributed Dense layer  
 - **Loss**: Huber (robust to outliers)  
 - **Evaluation**: chronological train/validation/test split (70/15/15).  
@@ -34,13 +34,3 @@ The model is able to track volatility clustering and regime shifts, providing a 
 - Risk management (VaR, Expected Shortfall)  
 - Trading and portfolio allocation (volatility targeting)  
 - Options pricing (realized vs implied volatility)  
-
----
-
-## How to Run
-Clone the repo and install dependencies:
-```bash
-git clone https://github.com/username/repo-name.git
-cd repo-name
-pip install -r requirements.txt
-
